@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        function evenOdd() {
+            let num = prompt("Enter a number")
+            if (num % 2 > 0) {
+                document.write(num + " is not even")
+            } else {
+                document.write(num + " is even")
+            }
+        }
+
+        function lessThanEqualMoreThatZero() {
+           let num1 = prompt("Enter a number")
+
+           if (num1 < 0) {
+                document.write(num1 + " is less than zero")
+           } else if (num1 > 0) {
+                document.write(num1 + " is greater than zero")
+           } else {
+                document.write(num1 + " is zero")
+           }
+            
+        }
+        
+        function eligegibleToDrive() {
+            let age = prompt("Enter your age");
+            if (age < 16) {
+                document.write("You are not allowed to drive")
+            } else if (age >= 16 && age < 18) {
+                document.write("You are allowed to practiec driving with an eligible partner")
+            } else {
+                document.write("You are allowed to drive")
+            }
+        }
+
+function month() {
+
+let monthName = "bad";
+let monthNumber = prompt("Enter 1- 12");
+monthNumber = parseInt(monthNumber);
+
+switch (monthNumber) {
+    case 1:
+        monthName = "January";
+        break;
+    case 2:
+        monthName = "February";
+        break;
+    case 3:
+        monthName = "Mars";
+        break;
+    case 4:
+        monthName = "April";
+        break;
+
+    case 5:
+        monthName = "May";
+        break;
+
+    case 6:
+        monthName = "June";
+        break;
+    case 7:
+        monthName = "July";
+        break;
+    case 8:
+        monthName = "August";
+        break;
+    case 9:
+        monthName = "September";
+        break;
+    case 10:
+        monthName = "October";
+        break;
+    case 11:
+        monthName = "November";
+        break;
+    case 12:
+        monthName = "Desember";
+        break;
+    default:
+        monthName = "TWAT pick a differnt number";
+        break;
+
+}
+
+document.write(monthName);
+
+
+
+} 
+
+let num1 = 0;
+let num2 = 0;
+let result = 0;
+let choice = 0;
+
+
+choice= prompt("Enter a choice");
+choice = parseInt(choice);
+switch (choice) {
+    case 1:
+        add();
+    break;
+
+    case "2":
+        sub();
+    break;
+
+    case 3:
+        div();
+    break;
+
+    case 4:
+        mul();
+    break;
+
+    case 5:
+        mod();
+    break;
+    default:
+        console.log("TWAT")
+        break;
+}
+
+function add(num1, num2) {
+    console.log("You have chosen addition!")
+      
+      
+
+    result = num1 + num2;
+}
+
+function sub(num1, num2) {
+    result = num1 - num2;
+}
+
+function div(num1, num2) {
+    result = num1 / num2;
+}
+
+function mul(num1, num2) {
+    result = num1 * num2;
+}
+
+function mod(num1, num2) {
+    result = num1 % num2;
+}
+
+
+
+ 
+</script>
+
+
+</head>
+<body>
+    
+<button onclick="evenOdd()">Even or Odd?</button>
+<button onclick="lessThanEqualMoreThatZero()">lessThanEqualMoreThatZero</button>
+<button onclick="eligegibleToDrive()">eligegibleToDrive</button>
+<button onclick="month()">month</button>
+
+
+</body>
+</html>

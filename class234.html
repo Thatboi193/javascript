@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car
+        {
+            constructor(name, color, weight, engineType) {
+                this.name = name;
+                this.color = color;
+                this.weight = weight;
+                this.engineType = engineType;
+            }
+
+            info(){
+                document.writeln(`Name:${this.name} Color:${this.color} Weight:${this.weight} Engine-type:${this.engineType}`)
+            }
+        }
+
+        
+        v1 = new Car("aaa", "bbb", "ccc", "ddd")
+
+        v1.info();
+    
+    </script>
+</body>
+</html>

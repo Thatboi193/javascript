@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Videogames {
+            constructor(name, year, genre, platform) {
+                this.name = name;
+                this.year = year;
+                this.genre = genre;
+                this.platform = platform;
+            }
+
+            info() {
+                document.write(`Name: ${this.name}, Release date: ${this.year}, Genre:${this.genre}, Platform:${this.platform}`)
+            }
+        }
+
+        v2 = new Videogames("Baldur's Gate 3", "2023", "Rpg, Top-Down", "PC, PS5");
+        console.log(v2)
+        v2.info();
+    </script>
+    
+</body>
+</html>
