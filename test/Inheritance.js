@@ -98,9 +98,22 @@ TASK 2 END*/
 
 /* TASK 3
 
+
 class Account {
     constructor() {
 
+    }
+
+    withdraw(amount) {
+        
+        this.balance = this.balance - amount;
+        console.log(`You Had ${this.balance + amount} you withdrew ${amount}. You now have ${this.balance} left.\n`);
+    }
+
+    deposit(amount) {
+        
+        this.balance = this.balance + amount;
+        console.log(`You Had ${this.balance - amount} you deposit ${amount}.\n You now have ${this.balance} in your account.\n`);
     }
 }
 
@@ -111,17 +124,7 @@ class CheckingAccount extends Account {
         this.balance = balance;
     }
 
-    withdraw(amount) {
-        
-        this.balance = this.balance - amount;
-        console.log(`You Had ${this.balance + amount} you withdrew ${amount}. You now have ${this.balance} left.\n`);
-    }
-
-    deposit(amount) {
-        
-        this.balance = this.balance + amount;
-        console.log(`You Had ${this.balance - amount} you deposit ${amount}.\n You now have ${this.balance} in your account.\n`);
-    }
+    
 }
 
 class SavingAccount extends Account {
@@ -131,18 +134,7 @@ class SavingAccount extends Account {
 
     }
 
-    withdraw(amount) {
-        
-        this.balance = this.balance - amount;
-        console.log(`You Had ${this.balance + amount} you withdrew ${amount}. You now have ${this.balance} left.\n`);
-    }
-
-    deposit(amount) {
-        
-        this.balance = this.balance + amount;
-        console.log(`You Had ${this.balance - amount} you deposit ${amount}.\n You now have ${this.balance} in your account.\n`);
-    }
-
+    
     calculateInterest() {
         let interestRate = 0.0275;
         let result = this.balance * (1 + interestRate);
@@ -156,6 +148,9 @@ s1 = new SavingAccount(1000);
 c1 = new CheckingAccount(2000);
 
 c1.deposit(200);
+s1.deposit(1000);
+
+ 
 
 TASK 3 END*/
 
@@ -408,24 +403,81 @@ console.log(bb.getBalance());
 
 TASK 8 END */
 
+/* TASK 9
 class Shape {
     constructor() {
 
     }
 
     calculateArea() {
-
+        console.log("calculateArea must be implemeted for each shape")
     }
 }
 
 class Circle extends Shape {
-    constructor() {
+    constructor(radius) {
+        super();
+        this.radius = radius;
+    }
 
+    calculateArea() {
+        let result = Math.PI * this.radius * this.radius
+        console.log(`${result} is the area of a circle with ${this.radius} radius.`)
     }
 }
 
 class Rectangle extends Shape {
-    constructor() {
-        
+    constructor(num1, num2) {
+        super();
+        this.num1 = num1;
+        this.num2 = num2;
+    }
+    calculateArea() {
+        let result = this.num1 * this.num2
+        console.log(`${result} is the area of a rectangle with ${this.num1} side and ${this.num2} side.`)
     }
 }
+
+let r1 = new Rectangle(10, 20);
+let c1 = new Circle(10);
+
+r1.calculateArea();
+c1.calculateArea();
+
+TASK 9 END */
+
+class Animal {
+    constructor() {
+
+    }
+
+    makeSound() {
+        console.log(`The animal makes a sound`);
+    }
+}
+
+class Dog extends Animal {
+    constructor() {
+        super();
+    }
+
+    makeSound() {
+        console.log(`The dog barks`);
+    }
+}
+
+class Cat extends Animal {
+    constructor() {
+        super();
+    }
+
+    makeSound() {
+        console.log(`The cat meaows`);
+    }
+}
+
+let d1 = new Dog;
+let c1 = new Cat;
+
+d1.makeSound();
+c1.makeSound();
